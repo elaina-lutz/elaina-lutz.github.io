@@ -44,24 +44,23 @@
 
     /* Hero Section */
     .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 80vh;
-      text-align: center;
-      padding: 0 20px;
-    }
-    .hero h2 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-    .hero p {
-      font-size: 1.1rem;
-      max-width: 600px;
-      margin: 0 auto;
-      color: #555;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px;
+}
+
+.hero-img {
+  width: 180px;        /* adjust size */
+  border-radius: 50%;  /* makes it circular */
+  border: 3px solid #ccc;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
 
     /* Sections */
     section {
@@ -127,9 +126,15 @@
 
   <!-- Hero -->
   <div class="hero">
+  <img src="me.jpg" alt="Photo of Elaina Lutz" class="hero-img">
+  <div class="hero-text">
     <h2>Hi, I’m Ellie!</h2>
-    <p>I’m an engineering student passionate about clean energy, electrical components, and developing creative solutions to real world problems. Here’s a quick overview of my work and projects.</p>
+    <p>
+      I’m an engineering student passionate about clean energy, electrical components, and developing creative solutions to real world problems. 
+      Here’s a quick overview of my work.
+    </p>
   </div>
+</div>
 
   <!-- About -->
   <section id="about">
