@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elaina Lutz | Portfolio</title>
+  <style>
+    /* Reset + base styles */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: #ffffff;
+      color: #333;
+      line-height: 1.6;
+      padding-top: 70px;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: #f9f9f9;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      z-index: 1000;
+    }
+    header h1 {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #0077cc; /* subtle accent */
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 80vh;
+      text-align: center;
+      padding: 0 20px;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+      color: #555;
+    }
+
+    /* Sections */
+    section {
+      max-width: 900px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+    section h3 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+    }
+
+    /* Projects grid */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .project-card {
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 20px;
+      background: #fafafa;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    .project-card h4 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+    .project-card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+      color: #777;
+      border-top: 1px solid #eee;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Elaina Lutz</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <div class="hero">
+    <h2>Hi, I’m Ellie!</h2>
+    <p>I’m an engineering student passionate about clean energy, electrical components, and developing creative solutions to real world problems. Here’s a quick overview of my work and projects.</p>
+  </div>
+
+  <!-- About -->
+  <section id="about">
+    <h3>About Me</h3>
+    <p>
+      I’m Elaina Lutz, an Honors Electrical and Computer Engineering student at Temple University with a focus on electrical. I’ve recently gained hands-on experience as a Strategic Electrical Engineering Intern at Constellation Energy’s Crane Clean Energy Center, where I supported plant restart efforts through breaker refurbishment, inverter verification, and reliability assessments. Active in organizations like SWE, IEEE, and Theta Tau, I’m passionate about applying creative problem-solving to complex energy challenges while staying curious and engaged in projects that blend technical skills with creativity.
+    </p>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h3>Projects</h3>
+    <div class="projects">
+      <div class="project-card">
+        <h4>Wind Turbine Analysis</h4>
+        <p>MATLAB project analyzing breakeven points and energy viability of turbines across different cities.</p>
+      </div>
+      <div class="project-card">
+        <h4>Rocket Equation Project</h4>
+        <p>Explained and derived Tsiolkovsky’s rocket equation step-by-step for physical applications.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h3>Contact</h3>
+    <p>
+      Feel free to reach out via <a href="mailto:elainalutz@example.com">email</a> or connect with me on 
+      <a href="https://github.com/elaina-lutz">GitHub</a> and <a href="www.linkedin.com/in/elaina-lutz-948114329">LinkedIn</a>.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Elaina Lutz. Built using GitHub Pages.</p>
+  </footer>
+
+</body>
+</html>
