@@ -44,23 +44,22 @@
 
     /* Hero Section */
     .hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  padding: 50px;
-}
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 50px;
+    }
 
-.hero-img {
-  width: 180px;        /* adjust size */
-  border-radius: 50%;  /* makes it circular */
-  border: 3px solid #ccc;
-}
+    .hero-img {
+      width: 180px;
+      border-radius: 50%;
+      border: 3px solid #ccc;
+    }
 
-.hero-text {
-  max-width: 600px;
-}
-
+    .hero-text {
+      max-width: 600px;
+    }
 
     /* Sections */
     section {
@@ -93,8 +92,13 @@
       box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     }
     .project-card h4 {
-      margin-bottom: 10px;
+      margin-bottom: 6px;
       font-size: 1.2rem;
+    }
+    .project-date {
+      font-size: 0.85rem;
+      color: #777;
+      margin-bottom: 12px;
     }
     .project-card p {
       font-size: 0.95rem;
@@ -127,15 +131,15 @@
 
   <!-- Hero -->
   <div class="hero">
-  <img src="github - 1 of 1.jpeg" alt="Photo of Elaina Lutz" class="hero-img">
-  <div class="hero-text">
-    <h2>Hi, I’m Ellie!</h2>
-    <p>
-      I’m an engineering student passionate about clean energy, space exploration, and developing creative solutions to real world problems. 
-      Here’s a quick overview of my work.
-    </p>
+    <img src="github - 1 of 1.jpeg" alt="Photo of Elaina Lutz" class="hero-img">
+    <div class="hero-text">
+      <h2>Hi, I’m Ellie!</h2>
+      <p>
+        I’m an engineering student passionate about clean energy, space exploration, and developing creative solutions to real world problems.
+        Here’s a quick overview of my work.
+      </p>
+    </div>
   </div>
-</div>
 
   <!-- About -->
   <section id="about">
@@ -144,56 +148,61 @@
       I am currently an Honors Electrical and Computer Engineering student at Temple University with a focus in electrical. I’ve recently gained hands-on experience as a Strategic Electrical Engineering Intern at Constellation Energy’s Crane Clean Energy Center, where I supported plant restart efforts through breaker refurbishment, inverter verification, and reliability assessments. Active in organizations like SWE, IEEE, and Theta Tau, I’m passionate about applying creative problem-solving to complex energy challenges while staying curious and engaged in projects that blend technical skills with creativity.
     </p>
   </section>
-  
-<!-- Projects -->
-<section id="projects">
-  <h3>Projects</h3>
-  <div class="projects">
 
-    <div class="project-card">
-      <h4>Temperature Detector Circuit <span style="float:right; font-weight:normal;">December 2025</span></h4>
-      <p>
-        Designed and implemented an analog temperature detection circuit using a thermistor, MOSFET, potentiometer, and LED to indicate an increase in temperature.
-      </p>
-      <p>
-        Simulated circuit behavior in NI Multisim and validated results through hardware testing using a breadboard and multimeter.
-      </p>
+  <!-- Projects -->
+  <section id="projects">
+    <h3>Projects</h3>
+    <div class="projects">
+
+      <div class="project-card">
+        <h4>Temperature Detector Circuit</h4>
+        <div class="project-date">December 2025</div>
+        <p>
+          Designed and implemented an analog temperature detection circuit using a thermistor, MOSFET, potentiometer, and LED to indicate an increase in temperature.
+        </p>
+        <p>
+          Simulated circuit behavior in NI Multisim and validated results through hardware testing using a breadboard and multimeter.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h4>Wind Turbine Analysis</h4>
+        <div class="project-date">June 2025</div>
+        <p>
+          Collected and cleaned large datasets of wind speed measurements for performance evaluation.
+        </p>
+        <p>
+          Developed MATLAB and Excel models to simulate wind turbine efficiency under varying conditions.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h4>Micro:bit Incubator</h4>
+        <div class="project-date">November 2024</div>
+        <p>
+          Designed and built an incubator system for controlled environments.
+        </p>
+        <p>
+          Programmed a Micro:bit microcontroller to monitor temperature and automatically switch the heating element on and off when readings moved outside the target range.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h4>Rocket Equation Project</h4>
+        <div class="project-date">April 2025</div>
+        <p>
+          Derived and explained Tsiolkovsky’s rocket equation step-by-step, connecting mathematical formulation to physical propulsion applications.
+        </p>
+      </div>
+
     </div>
+  </section>
 
-    <div class="project-card">
-      <h4>Wind Turbine Analysis <span style="float:right; font-weight:normal;">June 2025</span></h4>
-      <p>
-        Collected and cleaned large datasets of wind speed measurements for performance evaluation.
-      </p>
-      <p>
-        Developed MATLAB and Excel models to simulate wind turbine efficiency under varying conditions.
-      </p>
-    </div>
-
-    <div class="project-card">
-      <h4>Micro:bit Incubator <span style="float:right; font-weight:normal;">November 2024</span></h4>
-      <p>
-        Designed and built an incubator system for controlled environments.
-      </p>
-      <p>
-        Programmed a Micro:bit microcontroller to monitor temperature and automatically switch the heating element on and off when readings moved outside the target range.
-      </p>
-    </div>
-
-    <div class="project-card">
-      <h4>Rocket Equation Project</h4>
-      <p>
-        Derived and explained Tsiolkovsky’s rocket equation step-by-step, connecting mathematical formulation to physical propulsion applications.
-      </p>
-    </div>
-
-  </div>
-</section>
   <!-- Contact -->
   <section id="contact">
     <h3>Contact</h3>
     <p>
-      Feel free to reach out via <a href="mailto:elaina.lutz@temple.edu">email</a> or connect with me on 
+      Feel free to reach out via <a href="mailto:elaina.lutz@temple.edu">email</a> or connect with me on
       <a href="https://github.com/elaina-lutz">GitHub</a> and <a href="https://www.linkedin.com/in/elaina-lutz-948114329" target="_blank" rel="noopener">LinkedIn</a>.
     </p>
   </section>
