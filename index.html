@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Elaina Lutz | Portfolio</title>
+  <title>Elaina Lutz | ECE Engineering Portfolio</title>
   <style>
     /* Reset + base styles */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: "Helvetica Neue", Arial, sans-serif;
-      background: #ffffff;
-      color: #333;
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      background: #f8f9fa;
+      color: #2c3e50;
       line-height: 1.6;
       padding-top: 70px;
     }
@@ -19,27 +19,30 @@
     header {
       position: fixed;
       top: 0; left: 0; right: 0;
-      background: #f9f9f9;
-      border-bottom: 1px solid #eee;
+      background: #ffffff;
+      border-bottom: 2px solid #e8e8e8;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 15px 50px;
       z-index: 1000;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     }
     header h1 {
-      font-size: 1.2rem;
-      font-weight: bold;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #1a3a52;
     }
     nav a {
-      margin-left: 20px;
+      margin-left: 25px;
       text-decoration: none;
-      color: #333;
+      color: #2c3e50;
       font-size: 0.95rem;
+      font-weight: 500;
       transition: color 0.3s;
     }
     nav a:hover {
-      color: #0077cc; /* subtle accent */
+      color: #0077cc;
     }
 
     /* Hero Section */
@@ -47,62 +50,224 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 20px;
-      padding: 50px;
+      gap: 40px;
+      padding: 60px 50px;
+      background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
     }
 
     .hero-img {
       width: 180px;
+      height: 180px;
       border-radius: 50%;
-      border: 3px solid #ccc;
+      border: 4px solid #0077cc;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0,119,204,0.2);
     }
 
     .hero-text {
       max-width: 600px;
     }
 
+    .hero-text h2 {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      color: #1a3a52;
+    }
+
+    .hero-text .tagline {
+      font-size: 1.1rem;
+      color: #0077cc;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .hero-text p {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.7;
+    }
+
     /* Sections */
     section {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 80px auto;
       padding: 0 20px;
     }
+
     section h3 {
-      font-size: 1.8rem;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #1a3a52;
+      border-bottom: 3px solid #0077cc;
+      padding-bottom: 12px;
+      display: inline-block;
+    }
+
+    /* About Section */
+    .about-content {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      line-height: 1.8;
+      color: #444;
+    }
+
+    /* Education & Experience */
+    .education, .experience {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
       margin-bottom: 20px;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      border-left: 4px solid #0077cc;
+    }
+
+    .education h4, .experience h4 {
+      font-size: 1.2rem;
+      color: #1a3a52;
+      margin-bottom: 5px;
+    }
+
+    .education .school, .experience .company {
+      font-weight: 600;
+      color: #0077cc;
+      margin-bottom: 3px;
+    }
+
+    .education .details, .experience .details {
+      font-size: 0.95rem;
+      color: #666;
+      margin-bottom: 12px;
+    }
+
+    .education p, .experience p {
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    .gpa {
+      color: #27ae60;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    .honors {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 8px;
+      font-style: italic;
     }
 
     /* Projects grid */
     .projects {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
     }
+
     .project-card {
-      border: 1px solid #eee;
-      border-radius: 10px;
-      padding: 20px;
-      background: #fafafa;
-      transition: transform 0.2s, box-shadow 0.2s;
+      border: 1px solid #e8e8e8;
+      border-radius: 12px;
+      padding: 25px;
+      background: white;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
     }
+
     .project-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,119,204,0.15);
+      border-color: #0077cc;
     }
+
     .project-card h4 {
-      margin-bottom: 6px;
-      font-size: 1.2rem;
+      margin-bottom: 8px;
+      font-size: 1.25rem;
+      color: #1a3a52;
     }
+
     .project-date {
       font-size: 0.85rem;
-      color: #777;
-      margin-bottom: 12px;
+      color: #0077cc;
+      font-weight: 600;
+      margin-bottom: 15px;
     }
+
     .project-card p {
       font-size: 0.95rem;
       color: #555;
+      margin-bottom: 10px;
+      flex-grow: 1;
+    }
+
+    /* Skills Section */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .skill-category {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      border-top: 4px solid #0077cc;
+    }
+
+    .skill-category h4 {
+      color: #1a3a52;
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+    }
+
+    .skill-category p {
+      color: #555;
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    /* Leadership & Activities */
+    .leadership-item {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      border-left: 4px solid #0077cc;
+    }
+
+    .leadership-item h4 {
+      color: #1a3a52;
+      margin-bottom: 5px;
+    }
+
+    .leadership-item .role {
+      color: #0077cc;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .leadership-item .dates {
+      font-size: 0.85rem;
+      color: #777;
+    }
+
+    /* Links and Contact */
+    a {
+      color: #0077cc;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    a:hover {
+      color: #005fa3;
+      text-decoration: underline;
     }
 
     /* Footer */
@@ -111,8 +276,41 @@
       padding: 40px 20px;
       font-size: 0.9rem;
       color: #777;
-      border-top: 1px solid #eee;
-      margin-top: 60px;
+      border-top: 2px solid #e8e8e8;
+      margin-top: 80px;
+      background: #f8f9fa;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+      }
+
+      nav a {
+        margin-left: 15px;
+        font-size: 0.85rem;
+      }
+
+      .hero {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center;
+      }
+
+      .hero-text h2 {
+        font-size: 1.8rem;
+      }
+
+      section {
+        margin: 60px auto;
+      }
+
+      section h3 {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
@@ -123,7 +321,11 @@
     <h1>Elaina Lutz</h1>
     <nav>
       <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#leadership">Leadership</a>
       <a href="#contact">Contact</a>
       <a href="Elaina_Lutz_Resume.pdf" target="_blank" rel="noopener">Resume</a>
     </nav>
@@ -133,10 +335,10 @@
   <div class="hero">
     <img src="github - 1 of 1.jpeg" alt="Photo of Elaina Lutz" class="hero-img">
     <div class="hero-text">
-      <h2>Hi, I’m Ellie!</h2>
+      <h2>Hi, I'm Ellie!</h2>
+      <div class="tagline">Electrical & Computer Engineering Student | Temple University</div>
       <p>
-        I’m an engineering student passionate about clean energy, space exploration, and developing creative solutions to real world problems.
-        Here’s a quick overview of my work.
+        I'm an Honors ECE student passionate about clean energy, space exploration, and solving real-world engineering challenges through innovation and creativity. I combine technical depth in power systems, embedded systems, and software engineering with hands-on experience from internships at Fortune 500 companies and cutting-edge research initiatives.
       </p>
     </div>
   </div>
@@ -144,9 +346,72 @@
   <!-- About -->
   <section id="about">
     <h3>About Me</h3>
-    <p>
-      I am currently an Honors Electrical and Computer Engineering student at Temple University with a focus in electrical. I’ve recently gained hands-on experience as a Strategic Electrical Engineering Intern at Constellation Energy’s Crane Clean Energy Center, where I supported plant restart efforts through breaker refurbishment, inverter verification, and reliability assessments. Active in organizations like SWE, IEEE, and Theta Tau, I’m passionate about applying creative problem-solving to complex energy challenges while staying curious and engaged in projects that blend technical skills with creativity.
-    </p>
+    <div class="about-content">
+      <p>
+        I'm a driven Electrical and Computer Engineering student at Temple University with a passion for applying creative problem-solving to complex technical challenges. Through internships at Constellation Energy's Crane Clean Energy Center, I've developed expertise in power systems, equipment verification, and plant operations—skills directly applicable to grid reliability and clean energy infrastructure.
+      </p>
+      <p style="margin-top: 15px;">
+        Beyond the classroom, I'm developing cutting-edge machine learning solutions for biomedical applications at the Neural Engineering Data Consortium, mentoring aspiring engineers, and leading initiatives at IEEE and professional engineering organizations. I thrive at the intersection of rigorous technical execution and creative innovation, and I'm excited to bring this perspective to impactful engineering challenges.
+      </p>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <h3>Education</h3>
+    <div class="education">
+      <h4>Bachelor of Science in Electrical and Computer Engineering</h4>
+      <div class="school">Temple University – College of Engineering</div>
+      <div class="details">Expected Graduation: May 2028 | Philadelphia, PA</div>
+      <div class="gpa">GPA: 3.99/4.00</div>
+      <div class="honors">
+        <strong>Honors:</strong> Dean's List (Fall 2024, Spring 2025, Fall 2025, Spring 2026) • Provost's Tuition Scholarship • Honors Program
+      </div>
+      <div style="margin-top: 15px; color: #666; font-size: 0.9rem;">
+        <strong>Relevant Coursework:</strong> Power Electronics, Digital Circuit Design, Signals and Systems, Computation II
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <h3>Work Experience</h3>
+
+    <div class="experience">
+      <h4>Software Engineer</h4>
+      <div class="company">Neural Engineering Data Consortium</div>
+      <div class="details">August 2026 – Present | Philadelphia, PA</div>
+      <p>Develop machine learning tools for biofilm image analysis, build automated training pipelines and biostatistics programs, create turn-key scripts for model training, and architect web-based diagnostic applications. Contributing to cutting-edge research at the intersection of AI and biomedical engineering.</p>
+    </div>
+
+    <div class="experience">
+      <h4>Engineering Computation I Peer Mentor</h4>
+      <div class="company">Temple University College of Engineering</div>
+      <div class="details">December 2025 – Present</div>
+      <p>Evaluate and grade student submissions for code correctness, algorithmic efficiency, and analytical rigor. Provide structured feedback on testable code practices and computational problem-solving, helping emerging engineers develop strong technical foundations.</p>
+    </div>
+
+    <div class="experience">
+      <h4>Introduction to Engineering Teaching Assistant</h4>
+      <div class="company">Temple University College of Engineering</div>
+      <div class="details">August 2025 – December 2025</div>
+      <p>Assisted first-year engineering students with technical problem-solving and assignment verification. Conducted weekly office hours providing guidance on systems-based design thinking and engineering fundamentals.</p>
+    </div>
+
+    <div class="experience">
+      <h4>Programs & CMO Electrical Engineering Intern</h4>
+      <div class="company">Constellation Energy – Crane Clean Energy Center</div>
+      <div class="details">June 2026 – August 2026 | Middletown, PA</div>
+      <p>Led verification workflow for breaker refurbishment and replacement operations, coordinating across site departments to ensure compliance with equipment protocols and documenting findings in technical reports. Assisted with aging management programs to ensure regulatory compliance and equipment reliability for safe, efficient plant operations.</p>
+    </div>
+
+    <div class="experience">
+      <h4>Strategic Electrical Engineering Intern</h4>
+      <div class="company">Constellation Energy – Crane Clean Energy Center</div>
+      <div class="details">June 2025 – August 2025 | Middletown, PA</div>
+      <p>Performed inverter ID verification and asset management, validating equipment prior to operational restart. Conducted plant walkdowns to assess equipment readiness and analyzed electrical loading data for safe plant operations. Supported critical infrastructure reliability and operational excellence.</p>
+    </div>
+
   </section>
 
   <!-- Projects -->
@@ -155,13 +420,24 @@
     <div class="projects">
 
       <div class="project-card">
+        <h4>Arcade Game Engine</h4>
+        <div class="project-date">April 2026</div>
+        <p>
+          Built a distributed game platform with Python and C++ servers communicating via TCP/JSON, featuring custom data structures optimized for performance and memory efficiency.
+        </p>
+        <p>
+          Developed Pygame client with real-time chat and game browsing UI, engineered polymorphic serialization for flexible wire formats, debugged complex network communication, and implemented player state synchronization across remote connections.
+        </p>
+      </div>
+
+      <div class="project-card">
         <h4>Temperature Detector Circuit</h4>
         <div class="project-date">December 2025</div>
         <p>
-          Designed and implemented an analog temperature detection circuit using a thermistor, MOSFET, potentiometer, and LED to indicate an increase in temperature.
+          Designed and implemented an analog temperature detection circuit using a thermistor, MOSFET, potentiometer, and LED to indicate temperature changes.
         </p>
         <p>
-          Simulated circuit behavior in NI Multisim and validated results through hardware testing using a breadboard and multimeter.
+          Simulated circuit performance in NI Multisim and validated results through hardware testing and calibration using breadboard prototyping and multimeter measurements.
         </p>
       </div>
 
@@ -169,10 +445,10 @@
         <h4>Wind Turbine Analysis</h4>
         <div class="project-date">June 2025</div>
         <p>
-          Collected and cleaned large datasets of wind speed measurements for performance evaluation.
+          Collected and cleaned large datasets of wind speed measurements for performance evaluation under varied conditions.
         </p>
         <p>
-          Developed MATLAB and Excel models to simulate wind turbine efficiency under varying conditions.
+          Developed MATLAB and Excel simulation models to evaluate wind turbine efficiency under varying environmental conditions, applying mathematical modeling to renewable energy systems.
         </p>
       </div>
 
@@ -180,10 +456,10 @@
         <h4>Micro:bit Incubator</h4>
         <div class="project-date">November 2024</div>
         <p>
-          Designed and built an incubator system for controlled environments.
+          Designed and built a temperature-controlled incubator system for regulated experimental environments.
         </p>
         <p>
-          Programmed a Micro:bit microcontroller to monitor temperature and automatically switch the heating element on and off when readings moved outside the target range.
+          Programmed a Micro:bit microcontroller to monitor temperature sensors in real-time and automatically switch the heating element on and off when readings moved outside the target range using embedded systems programming.
         </p>
       </div>
 
@@ -191,25 +467,91 @@
         <h4>Rocket Equation Project</h4>
         <div class="project-date">April 2025</div>
         <p>
-          Derived and explained Tsiolkovsky’s rocket equation step-by-step, connecting mathematical formulation to physical propulsion applications.
+          Derived and explained Tsiolkovsky's rocket equation step-by-step, connecting mathematical formulation to physical propulsion applications in space exploration.
+        </p>
+        <p>
+          Demonstrated mastery of orbital mechanics and aerospace engineering fundamentals through rigorous mathematical analysis.
         </p>
       </div>
 
     </div>
   </section>
 
+  <!-- Skills -->
+  <section id="skills">
+    <h3>Technical Skills</h3>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h4>Programming & Software</h4>
+        <p>Python, C/C++, MATLAB, Linux/Unix Command Line, NumPy, Matplotlib, Bash, GitHub, VS Code, EMACS, AWS, Slurm</p>
+      </div>
+
+      <div class="skill-category">
+        <h4>Engineering Tools</h4>
+        <p>NI Multisim, KiCad, AutoCAD, Inventor 2025, draw.io, Scopy, Microsoft Office Suite</p>
+      </div>
+
+      <div class="skill-category">
+        <h4>Hardware & Electronics</h4>
+        <p>Circuit Design & Breadboard Prototyping, Embedded Systems (Arduino, Micro:bit), Test & Measurement (Oscilloscopes, Multimeters), Soldering & PCB Assembly</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership & Activities -->
+  <section id="leadership">
+    <h3>Leadership & Activities</h3>
+
+    <div class="leadership-item">
+      <h4>Eta Kappa Nu (HKN) – IEEE Honor Society</h4>
+      <div class="dates">April 2026 – Present</div>
+    </div>
+
+    <div class="leadership-item">
+      <h4>Power and Energy Society (PES), IEEE Branch</h4>
+      <div class="role">Marketing Director</div>
+      <div class="dates">March 2026 – Present | Philadelphia, PA</div>
+    </div>
+
+    <div class="leadership-item">
+      <h4>Women in Engineering (WIE), IEEE Branch</h4>
+      <div class="role">Marketing Chair</div>
+      <div class="dates">September 2025 – Present | Philadelphia, PA</div>
+    </div>
+
+    <div class="leadership-item">
+      <h4>Theta Tau – Professional Engineering Fraternity</h4>
+      <div class="role">Treasurer</div>
+      <div class="dates">January 2026 – Present | Philadelphia, PA</div>
+    </div>
+
+    <div class="leadership-item">
+      <h4>Institute of Electrical and Electronics Engineers (IEEE)</h4>
+      <div class="role">Member</div>
+      <div class="dates">September 2024 – Present | Philadelphia, PA</div>
+    </div>
+
+  </section>
+
   <!-- Contact -->
   <section id="contact">
-    <h3>Contact</h3>
-    <p>
-      Feel free to reach out via <a href="mailto:elaina.lutz@temple.edu">email</a> or connect with me on
-      <a href="https://github.com/elaina-lutz">GitHub</a> and <a href="https://www.linkedin.com/in/elaina-lutz-948114329" target="_blank" rel="noopener">LinkedIn</a>.
-    </p>
+    <h3>Contact & Connect</h3>
+    <div class="about-content">
+      <p>
+        I'm always interested in connecting with mentors, collaborators, and fellow engineers. Feel free to reach out!
+      </p>
+      <p style="margin-top: 20px;">
+        <strong>Email:</strong> <a href="mailto:elaina.lutz@temple.edu">elaina.lutz@temple.edu</a> | 
+        <strong>Phone:</strong> (484) 681-0820<br>
+        <strong>GitHub:</strong> <a href="https://github.com/elaina-lutz" target="_blank">github.com/elaina-lutz</a> | 
+        <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/elaina-lutz" target="_blank">linkedin.com/in/elaina-lutz</a>
+      </p>
+    </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Elaina Lutz. Built using GitHub Pages.</p>
+    <p>© 2025 Elaina Lutz. All rights reserved. Designed with attention to detail. <a href="Elaina_Lutz_Resume.pdf" target="_blank">Download Resume (PDF)</a></p>
   </footer>
 
 </body>
